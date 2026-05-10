@@ -1,96 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Deceptacon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Deceptacon</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      background-color: white;
+      padding: 30px 20px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    h1 {
+      color: blue;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      margin-top: 30px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 25px;
+      background-color: white;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .team-names {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .image-card {
+      max-width: 320px;
+      text-align: center;
+    }
+
+    .image-card img,
+    .image-card video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .wide-card {
+      max-width: 500px;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #ccc;
+    }
+  </style>
 </head>
+
 <body>
 
-<div style="text-align: center;">
-	<h1 style="color: blue;"><u>Team Deceptacon</u></h1> 
-<hr>
-	<h1> <u>Matthew Lee</u>&emsp; <u>Artem Kyselov</u>&emsp; <u>June Roe</u> </h1>
-</div>
+  <header>
+    <h1><u>Team Deceptacon</u></h1>
+    <p class="team-names">Matthew Lee &nbsp; Artem Kyselov &nbsp; June Roe</p>
+  </header>
 
- 	<p>The Deceptacon robot's goal is to move at two speeds, depending on the speed of a moving target.</p> 
-<div style="text-align: center;">
-	<img src="robot.jpg" alt="Deceptecon robot" width="300">
-	<p>The above image shows the robot's 3d model. (Legs not shown) </p> 
-</div>
+  <main>
 
-	<h2> Project Description </h2>
-	<p> Our ultimate goal for Deceptacon is to build a hybrid robot that can use both legs and a rolling "wheel" mode to follow a target moving at two different speeds- fast and slow. Deceptacon has two core behaviors: 
-It will walk to track a slow moving target (person or object), and it will switch into rolling mode when the target begins moving faster. In order to do this, Deceptacon has a round, ball- like body that has 4 
-	trap doors that form a smooth exterior for rolling. When walking is more efficient, the trap doors open to reveal 4 legs. Each of these legs are powered by 2 servos each. One to function it's yaw axis (side to side rotation), and another
-	to control the pitch axis (forward and back motion). Along with these 8 servos, we will use 2 more servos to animate large "ears" at the top of our robot. These ears will act as stabilizers as it rolls, ensuring that when the robot rolls, it rolls in a straight line. In total, we will be using 10 servos- 8 for legs, 2 for ears. For sensors, we are using eight Vl53l0x LIDAR sensors around the perimeter of the robot so it can detect its environment in both walking and rolling modes. This will help Deception maintain a steady motion and void obstacles while rolling with its target. In terms of power, we are connecting a 3300mAh LiPo battery in the center of the body of the robot, slightly elevated. Due to the battery's weight, the placement will aid in the rolling function. Finally, we plan on using an Arduino Nano to control the robot, but this is subject to change if a RPi0 proves to be more useful.  </p>
-	
-	<h2> Version History </h2>
+    <section class="section center">
+      <p>The Deceptacon robot's goal is to move at two speeds, depending on the speed of a moving target.</p>
 
-	<h3> Leg Sketch + Versions</h3>
-	<img src="v1sketch.jpg" alt="Deceptecon robot" width="300">
-	
-	<img src="v1v2.jpg" alt="Deceptecon robot" width="300">
-	<img src="finalleg.png" alt="Deceptecon robot" width="400">
-	<img src="newleg.jpeg" alt="Deceptecon robot" width="350">
-	<p style="margin-left: 300px;"> This leg &#8593; displays our version 1, &#8593; this &emsp; &emsp; &ensp; The image above shows our original leg design.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Our new and improved reinforced leg design. <br>leg displays version 2.</p>
+      <img src="robot.jpg" alt="Deceptacon robot 3D model" width="300">
+      <p class="caption">The above image shows the robot's 3D model. Legs not shown.</p>
+    </section>
 
-	<h3> Body Versions + Progress </h3>
-	<img src="bodyv1sketch.jpg" alt="Deceptecon robot" width="600">
-	<img src="bottomhalfbody.png" alt="Deceptecon robot" width="500">
-	<img src="bottomhalfwlegs.png" alt="Deceptecon robot" width="500">
-	
-	
-	<p> Our first sketch including ears, eyes, sensors. 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;  
+    <section class="section">
+      <h2>Project Description</h2>
 
-		The very first 3d model of the leg and bottom hemisphere of robot. </p> 
+      <p>
+        Our ultimate goal for Deceptacon is to build a hybrid robot that can use both legs and a rolling “wheel” mode to follow a target moving at two different speeds: fast and slow. Deceptacon has two core behaviors: it will walk to track a slow-moving target, such as a person or object, and it will switch into rolling mode when the target begins moving faster.
+      </p>
 
-	<img src="bodyv23d.png" alt="Deceptecon robot" width="400">
-	<img src="finaldeceptacon.png" alt="Deceptecon robot" width="450">
-	<img src="bodyv33d.png" alt="Deceptecon robot" width="400">
+      <p>
+        In order to do this, Deceptacon has a round, ball-like body with four trap doors that form a smooth exterior for rolling. When walking is more efficient, the trap doors open to reveal four legs. Each leg is powered by two servos: one controls the yaw axis, or side-to-side rotation, and another controls the pitch axis, or forward-and-back motion.
+      </p>
 
-	<p style="margin-left: 865px;"> Final model! </p>
-	
-	<img src="reinfleg.jpeg" alt="Deceptecon robot" width="400">
-	<img src="deceptguts.jpeg" alt="Deceptecon robot" width="400">
-	<img src="weighttest.jpeg" alt="Deceptecon robot" width="400">
-	<img src="stepdownconverter.jpeg" alt="Deceptecon robot" width="400">
-	<p> New, reinforced legs.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ardiuno connected to servos and sensors.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Finally standing on all 4 legs, undergoing weight test.&emsp;&emsp;&emsp;&emsp;We started with one Two Step Down Converter, but then ended
+      <p>
+        Along with these eight servos, we use two additional servos to animate large “ears” at the top of the robot. These ears act as stabilizers while the robot rolls, helping it move in a straight line. In total, we are using 10 servos: eight for the legs and two for the ears.
+      </p>
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+      <p>
+        For sensors, we are using eight VL53L0X LIDAR sensors around the perimeter of the robot so it can detect its environment in both walking and rolling modes. This helps Deceptacon maintain steady motion and avoid obstacles while following its target.
+      </p>
 
-up installing two. (We burnt our first one) </p>
+      <p>
+        In terms of power, we are connecting a 3300mAh LiPo battery in the center of the robot’s body, slightly elevated. Because of the battery’s weight, this placement helps with the rolling function. Finally, we plan on using an Arduino Nano to control the robot, though this is subject to change if a Raspberry Pi Zero proves to be more useful.
+      </p>
+    </section>
 
-<video width="500" height="530" controls>
-  <source src="blink.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-<img src="wiresonarduino.jpeg" alt="Deceptecon robot" width="400">
-<img src="robotdone.jpeg" alt="Deceptecon robot" width="400">
+    <section class="section">
+      <h2>Version History</h2>
 
-<p> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Baby's first blinks! &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Final version of robot fully constructed.</p>
-	
+      <h3>Leg Sketches and Versions</h3>
 
-	
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="v1sketch.jpg" alt="Version 1 leg sketch">
+          <p class="caption">Early leg sketch.</p>
+        </div>
 
-<h2> How We Came Up With Deceptacon </h2>
-<p> Initially, our goal was to design a bio-inspired armadillo robot, but struggled to define a clear goal or task for it. After some brainstorming, we noticed similarities between an armadillo's ability to curl and roll and the design of a Droideka from Star Wars (a robot that can roll to quickly move, and unfold into a two-legged DESTROYER). This led us to the idea that building a robot that can both roll and walk based off of environmental conditions. Not only does this capture the armadillo's unique movement, but it also is a nice spin-off to our in-class debate about the advantages of wheels versus legs. </p>
-<div style="text-align: center;">
-  <img src="armadillo.jpeg" alt="Deceptecon robot" width="450">
-  <img src="droideka.jpg" alt="Deceptecon robot" width="400">
-<br>
-</div>
-<hr>
-<br>
-<div style="text-align: center;">
-	<img src="juneandartem.jpeg" alt="Deceptecon robot" width="400">
-	<img src="mattlee.jpeg" alt="Deceptecon robot" width="400">
+        <div class="image-card">
+          <img src="v1v2.jpg" alt="Version 1 and version 2 leg designs">
+          <p class="caption">Version 1 and version 2 leg designs.</p>
+        </div>
 
-<p> Shown above is TEAM DECEPTACON posing with the final version of our robot. Through plenty of trial and error, we successfully got all of the servos running and several of the sensors fully operational. One of our biggest takeaways from this project was learning that ambitious ideas are exciting- but much harder to achieve within the span of a single semester. Overall, it was a rewarding experience collaborating as a team and bringing our vision to life. If we were to start the project again, we would focus on reducing the robot’s overall weight and reinforcing the legs earlier in the design process, since our greatest challenge was ensuring the 3D-printed legs could support the robot’s weight. Despite the obstacles, Deceptacon ultimately came to life, and we are proud of what we accomplished together. Cheers! </p>
+        <div class="image-card">
+          <img src="finalleg.png" alt="Original leg design">
+          <p class="caption">Original leg design.</p>
+        </div>
 
-<p> June Roe&emsp; Artem Kyselov&emsp; Matthew Lee </p>
-</div>
+        <div class="image-card">
+          <img src="newleg.jpeg" alt="Reinforced leg design">
+          <p class="caption">New and improved reinforced leg design.</p>
+        </div>
+      </div>
+
+      <h3>Body Versions and Progress</h3>
+
+      <div class="image-grid">
+        <div class="image-card wide-card">
+          <img src="bodyv1sketch.jpg" alt="First body sketch">
+          <p class="caption">First sketch including ears, eyes, and sensors.</p>
+        </div>
+
+        <div class="image-card wide-card">
+          <img src="bottomhalfbody.png" alt="Bottom half body model">
+          <p class="caption">First 3D model of the bottom hemisphere of the robot.</p>
+        </div>
+
+        <div class="image-card wide-card">
+          <img src="bottomhalfwlegs.png" alt="Bottom half body model with legs">
+          <p class="caption">Bottom half of the body with legs attached.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="bodyv23d.png" alt="Body version 2">
+          <p class="caption">Body version 2 model.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="finaldeceptacon.png" alt="Final Deceptacon model">
+          <p class="caption">Final model.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="bodyv33d.png" alt="Body version 3">
+          <p class="caption">Body version 3 model.</p>
+        </div>
+      </div>
+
+      <h3>Build Progress</h3>
+
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="reinfleg.jpeg" alt="Reinforced robot legs">
+          <p class="caption">New reinforced legs.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="deceptguts.jpeg" alt="Arduino connected to servos and sensors">
+          <p class="caption">Arduino connected to servos and sensors.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="weighttest.jpeg" alt="Robot standing on all four legs">
+          <p class="caption">Finally standing on all four legs while undergoing a weight test.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="stepdownconverter.jpeg" alt="Step down converter">
+          <p class="caption">We started with one step-down converter, but ended up installing two after burning out the first one.</p>
+        </div>
+
+        <div class="image-card">
+          <video controls>
+            <source src="blink.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <p class="caption">Baby’s first blinks!</p>
+        </div>
+
+        <div class="image-card">
+          <img src="wiresonarduino.jpeg" alt="Wires connected to Arduino">
+          <p class="caption">Wiring setup on the Arduino.</p>
+        </div>
+
+        <div class="image-card">
+          <img src="robotdone.jpeg" alt="Final completed robot">
+          <p class="caption">Final version of the robot fully constructed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How We Came Up With Deceptacon</h2>
+
+      <p>
+        Initially, our goal was to design a bio-inspired armadillo robot, but we struggled to define a clear goal or task for it. After some brainstorming, we noticed similarities between an armadillo’s ability to curl and roll and the design of a Droideka from Star Wars, a robot that can roll to move quickly and unfold into a two-legged destroyer.
+      </p>
+
+      <p>
+        This led us to the idea of building a robot that can both roll and walk based on environmental conditions. Not only does this capture the armadillo’s unique movement, but it also connects to our in-class debate about the advantages of wheels versus legs.
+      </p>
+
+      <div class="image-grid">
+        <div class="image-card wide-card">
+          <img src="armadillo.jpeg" alt="Armadillo">
+          <p class="caption">Armadillo inspiration.</p>
+        </div>
+
+        <div class="image-card wide-card">
+          <img src="droideka.jpg" alt="Droideka from Star Wars">
+          <p class="caption">Droideka inspiration from Star Wars.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="image-grid">
+        <div class="image-card wide-card">
+          <img src="juneandartem.jpeg" alt="June and Artem with robot">
+        </div>
+
+        <div class="image-card wide-card">
+          <img src="mattlee.jpeg" alt="Matthew Lee with robot">
+        </div>
+      </div>
+
+      <p>
+        Shown above is Team Deceptacon posing with the final version of our robot. Through plenty of trial and error, we successfully got all of the servos running and several of the sensors fully operational. One of our biggest takeaways from this project was learning that ambitious ideas are exciting, but much harder to achieve within the span of a single semester.
+      </p>
+
+      <p>
+        Overall, it was a rewarding experience collaborating as a team and bringing our vision to life. If we were to start the project again, we would focus on reducing the robot’s overall weight and reinforcing the legs earlier in the design process, since our greatest challenge was ensuring that the 3D-printed legs could support the robot’s weight.
+      </p>
+
+      <p>
+        Despite the obstacles, Deceptacon ultimately came to life, and we are proud of what we accomplished together. Cheers!
+      </p>
+
+      <p><strong>June Roe &nbsp; Artem Kyselov &nbsp; Matthew Lee</strong></p>
+    </footer>
+
+  </main>
+
 </body>
 </html>
